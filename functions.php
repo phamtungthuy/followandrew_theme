@@ -1,10 +1,24 @@
 <?php 
     function followandrew_theme_support() {
             // Adds dynamic title tag support
-             add_theme_support('title_tag');
+             add_theme_support('title-tag');
+             add_theme_support( 'custom-logo');
+             add_theme_support( 'post-thumbnails' );
     }
 
-    add_action('after_theme_setup', 'followandrew_theme_support');
+    add_action('after_setup_theme', 'followandrew_theme_support');
+
+
+
+    function followandrew_menus() {
+        $locations = array(
+            'primary' => "Desktop Primary Left Sidebar",
+            'footer' => "Footer Menu Items"
+        );
+        register_nav_menus($locations);
+    }
+
+    add_action('init', 'followandrew_menus');
 
 
     function followandrew_register_styles() {
@@ -17,6 +31,8 @@
     }
     add_action('wp_enqueue_scripts', 'followandrew_register_styles');
     
+
+
     function followandrew_register_scripts() {
 
         wp_enqueue_script('followandrew-jquery', 'https://code.jquery.com/jquery-3.4.1.slim.min.js', array(), '3.4.1', true);
