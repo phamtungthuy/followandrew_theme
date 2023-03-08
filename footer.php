@@ -5,7 +5,7 @@
        </footer>
    
    </div>
-   
+
    <?php wp_footer(); ?>
    <!-- Bootstrap Javascript -->          
 

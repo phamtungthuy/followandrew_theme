@@ -20,6 +20,12 @@
 
     add_action('init', 'followandrew_menus');
 
+    function folllowandrew_menus() {
+        $location = array(
+            'primary' => 'Desktop Primary Left Sidebar',
+            'footer' => 'Footer Menu Items'
+        );
+    }
 
     function followandrew_register_styles() {
 
