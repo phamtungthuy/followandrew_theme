@@ -6,6 +6,12 @@
 
     add_action('after_theme_setup', 'followandrew_theme_support');
 
+    function folllowandrew_menus() {
+        $location = array(
+            'primary' => 'Desktop Primary Left Sidebar',
+            'footer' => 'Footer Menu Items'
+        );
+    }
 
     function followandrew_register_styles() {
 
